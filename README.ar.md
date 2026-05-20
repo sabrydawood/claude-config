@@ -60,7 +60,6 @@
 
 ## 🎬 شاهده في عمل
 
-<!-- GIF placeholder — استبدله بتسجيل فعلي حسب docs/screenshots/RECORDING_GUIDE.ar.md -->
 <!-- ![Auto-Detection في عمل](docs/screenshots/auto-detection.gif) -->
 
 ```text
@@ -99,8 +98,6 @@
    └────────────────────────────────────────────────────┘
 ```
 
-> 📹 لإنشاء الـ GIF الفعلي، راجع [docs/screenshots/RECORDING_GUIDE.ar.md](docs/screenshots/RECORDING_GUIDE.ar.md)
-
 ---
 
 ## 🎯 ما هذا؟
@@ -116,7 +113,7 @@
 
 ## 🏗️ بنية الـ Repo
 
-```text
+```tree
 claude-config/
 ├── CLAUDE.md                      # الملف الرئيسي (يُحمَّل في كل session)
 ├── CommunicationProfiles.md       # 5 أساليب كتابة حسب الجمهور

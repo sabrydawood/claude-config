@@ -60,7 +60,6 @@ A portable, opinionated configuration for [Claude Code](https://claude.com/claud
 
 ## 🎬 See It in Action
 
-<!-- GIF placeholder — replace with actual recording per docs/screenshots/RECORDING_GUIDE.md -->
 <!-- ![Auto-Detection in action](docs/screenshots/auto-detection.gif) -->
 
 ```text
@@ -99,8 +98,6 @@ A portable, opinionated configuration for [Claude Code](https://claude.com/claud
    └────────────────────────────────────────────────────┘
 ```
 
-> 📹 To create the actual GIF, see [docs/screenshots/RECORDING_GUIDE.md](docs/screenshots/RECORDING_GUIDE.md)
-
 ---
 
 ## 🎯 What This Is
@@ -116,7 +113,7 @@ This repository is a **personal Claude Code configuration** designed for solo de
 
 ## 🏗️ Repo Structure
 
-```
+```tree
 claude-config/
 ├── CLAUDE.md                      # Main agent configuration (loaded every session)
 ├── CommunicationProfiles.md       # 5 audience-specific writing styles
@@ -161,6 +158,7 @@ claude-config/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - [Claude Code](https://claude.com/claude-code) installed
 - Git
 - PowerShell 5+ (Windows) or Bash (Mac/Linux)
@@ -168,16 +166,19 @@ claude-config/
 ### ⚡ One-line install (recommended)
 
 **Windows (PowerShell):**
+
 ```powershell
 irm https://raw.githubusercontent.com/sabrydawood/claude-config/main/bootstrap.ps1 | iex
 ```
 
 **Mac / Linux (Bash):**
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/sabrydawood/claude-config/main/bootstrap.sh | bash
 ```
 
 That's it. The bootstrap script will:
+
 1. Clone the repo to `~/claude-config`
 2. Back up your existing `~/.claude/` configuration (timestamped)
 3. Install all config files
@@ -200,6 +201,7 @@ bash scripts/install.sh
 ```
 
 ### After install
+
 - Edit `~/.claude/PersonalContext.md` — fill in your business context
 - Edit `~/.claude/settings.json` — add your permissions/hooks/secrets
 - Restart Claude Code to load the new config
@@ -222,6 +224,7 @@ git push
 ## 🧠 How the Multi-Role System Works
 
 ### Auto-Detection
+
 When you ask a question, the agent automatically detects which role(s) to activate based on context:
 
 | You ask... | Roles activated |
@@ -235,13 +238,17 @@ When you ask a question, the agent automatically detects which role(s) to activa
 A banner appears at the top of each response showing active roles + reason.
 
 ### Default Mode
+
 The agent runs in **CTO + Senior PM mode by default** — it plans and analyzes but does NOT write code unless explicitly asked ("implement this" / "نفّذ").
 
 ### Auto-ADR
+
 When the agent makes a significant architectural decision (stack choice, vendor selection, etc.), it automatically creates an Architecture Decision Record in `Decisions/`.
 
 ### Discovery-First Coding
+
 Before writing any code, the agent is required to:
+
 1. Read the full context (file + types + interfaces)
 2. Search for existing implementations (via Serena MCP)
 3. Verify understanding with the user
@@ -252,7 +259,9 @@ This prevents the "duplicate logic" anti-pattern common with AI code generation.
 ## ⚙️ Configuration
 
 ### `PersonalContext.md` (Template-based)
+
 After installation, edit `~/.claude/PersonalContext.md` with:
+
 - Your team size & specialization
 - Annual goals + current quarter focus
 - Active projects & client model
@@ -263,13 +272,17 @@ After installation, edit `~/.claude/PersonalContext.md` with:
 This file is **gitignored** — your personal data stays on your machine.
 
 ### `settings.json` (Template-based)
+
 Customize permissions, hooks, and MCP servers. **Never commit `settings.json`** — it may contain:
+
 - Database connection strings with passwords
 - API tokens
 - Custom file paths revealing project structure
 
 ### MCP Servers Recommended
+
 This config is optimized for these MCP servers (configure separately):
+
 - **Serena** — Code intelligence (`find_symbol`, `search_for_pattern`)
 - **code-review-graph** — Per-project code graph for risk analysis
 
@@ -283,6 +296,7 @@ The system is designed for Arabic-speaking developers but the technical content 
 ## 📚 Inspiration
 
 This setup is inspired by:
+
 - **dotfiles culture** — version control for developer environments
 - **Architecture Decision Records (ADRs)** — Michael Nygard's pattern
 - **Multi-agent role-based systems** — instead of one general assistant, specialized roles
@@ -291,6 +305,7 @@ This setup is inspired by:
 ## 🤝 Contributing
 
 This is a personal configuration but feel free to:
+
 - Fork and adapt to your workflow
 - Open issues if you find bugs
 - Suggest patterns or anti-patterns you've discovered
