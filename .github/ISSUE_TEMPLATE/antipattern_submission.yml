@@ -1,0 +1,65 @@
+name: 🚫 Anti-pattern Submission Idea
+description: Propose a documented mistake/gotcha
+title: "[Anti-pattern]: "
+labels: ["anti-pattern", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Anti-patterns are gold — they save others hours of debugging. Use this to **propose** one before writing it. For ready-to-merge anti-patterns, open a PR directly.
+
+        **Remember:** Strip client names, real URLs, and credentials. Describe the mistake, not the incident.
+
+  - type: input
+    id: name
+    attributes:
+      label: Anti-pattern Name (short)
+      placeholder: "e.g., Drizzle update without WHERE"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: One-sentence description of the wrong pattern
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_wrong
+    attributes:
+      label: Why It's Wrong
+      description: What does it cause? What's the impact?
+    validations:
+      required: true
+
+  - type: input
+    id: stack
+    attributes:
+      label: Stack / Framework Where Seen
+      placeholder: "e.g., Drizzle ORM + PostgreSQL"
+    validations:
+      required: true
+
+  - type: textarea
+    id: cost
+    attributes:
+      label: What Did It Cost?
+      description: "Downtime / hours debugging / data loss (rough estimate is fine)"
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: Correct Approach
+      description: Brief description (full pattern goes in the PR)
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: Story is anonymized (no client/project names)
+          required: true
+        - label: I encountered this in real work (not hypothetical)
+          required: true

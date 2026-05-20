@@ -1,0 +1,88 @@
+name: 🐛 Bug Report
+description: Report a problem with install scripts, sync scripts, or documentation
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please redact any secrets, paths, or personal info from logs.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component has the bug?
+      options:
+        - bootstrap.ps1 / bootstrap.sh
+        - install.ps1 / install.sh
+        - backup.ps1
+        - sync-check.ps1
+        - CLAUDE.md content
+        - Role file (specify in description)
+        - README / CONTRIBUTING / Docs
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (Ubuntu/Debian)
+        - Linux (Fedora/RHEL)
+        - Linux (Arch)
+        - WSL
+        - Other (specify)
+    validations:
+      required: true
+
+  - type: input
+    id: shell
+    attributes:
+      label: Shell + Version
+      description: "Run `pwsh --version` or `bash --version`"
+      placeholder: "PowerShell 7.4.0 / bash 5.2.21"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: What did you do?
+      placeholder: |
+        1. Ran `irm <url> | iex`
+        2. Selected option X
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Include error output (redact secrets/paths)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I removed all secrets, tokens, and personal paths from logs
+          required: true
+        - label: I checked existing issues for duplicates
+          required: true

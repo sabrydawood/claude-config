@@ -1,0 +1,50 @@
+name: ✨ Feature Request / Improvement
+description: Suggest an improvement to the system, scripts, or docs
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area?
+      options:
+        - Auto-behaviors (CLAUDE.md §12)
+        - Role definitions
+        - Sync scripts (install/backup/sync-check)
+        - Bootstrap installer
+        - Documentation (README, CONTRIBUTING)
+        - New supporting file (Patterns, Anti-patterns, Stacks)
+        - Translation (Arabic/English)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this solve? Don't describe the solution yet.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed Solution
+      description: What do you suggest?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches did you think about? Why is yours better?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: I've checked existing issues and discussions
+          required: true

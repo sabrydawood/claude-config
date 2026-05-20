@@ -1,0 +1,78 @@
+name: 💡 New Role Proposal
+description: Propose a new specialized role (Data Scientist, Security Engineer, etc.)
+title: "[Role]: "
+labels: ["new-role", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New roles are a **larger contribution** and need discussion before PR. Please answer all questions thoroughly.
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed Role Name
+      placeholder: "e.g., Senior Data Scientist / Senior Security Engineer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: domain
+    attributes:
+      label: Domain Boundary
+      description: What does this role do that the existing 8 roles don't cover?
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Auto-Detection Triggers
+      description: What conversation context should activate this role automatically?
+      placeholder: |
+        - When user asks about: data pipelines, model training, statistical analysis
+        - When request mentions: pandas, scikit-learn, R, A/B test significance
+    validations:
+      required: true
+
+  - type: textarea
+    id: co_active
+    attributes:
+      label: Co-active Partners
+      description: Which existing roles work alongside this one?
+      placeholder: |
+        - PM (when discussing product metrics)
+        - Engineer (when implementing ML pipelines)
+        - DevOps (when deploying models)
+    validations:
+      required: true
+
+  - type: textarea
+    id: frameworks
+    attributes:
+      label: Frameworks/Methodologies This Role Uses
+      description: Standardized industry frameworks (not invented). Cite sources.
+      placeholder: |
+        - CRISP-DM (data mining process)
+        - MLOps maturity levels
+        - Bayesian vs frequentist A/B testing
+    validations:
+      required: true
+
+  - type: textarea
+    id: antipatterns
+    attributes:
+      label: Anti-patterns Specific to This Role
+      description: Common mistakes when working in this domain
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: I've read the existing role files and confirm none cover this domain
+          required: true
+        - label: I'm willing to write the role file (matching format of Roles/CTO.md) if accepted
+          required: false

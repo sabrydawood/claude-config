@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Read the README first
+    url: https://github.com/sabrydawood/claude-config/blob/main/README.md
+    about: Most questions are answered in the README and CONTRIBUTING guides.
+  - name: 🤝 Contribution guide
+    url: https://github.com/sabrydawood/claude-config/blob/main/CONTRIBUTING.md
+    about: Before opening an issue for a new pattern/role, check the contribution guide.
+  - name: 💬 GitHub Discussions
+    url: https://github.com/sabrydawood/claude-config/discussions
+    about: General questions, ideas, or showing off your fork.

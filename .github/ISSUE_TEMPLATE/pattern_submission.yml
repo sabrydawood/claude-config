@@ -1,0 +1,57 @@
+name: 🧩 Pattern Submission Idea
+description: Propose a new reusable pattern (how-to)
+title: "[Pattern]: "
+labels: ["pattern", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to **propose** a pattern before writing it. For ready-to-merge patterns, open a PR directly following the template in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#-pattern-submission).
+
+  - type: input
+    id: name
+    attributes:
+      label: Pattern Name
+      placeholder: "e.g., Add Translation Table to Drizzle Schema"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: When would someone use this pattern? When NOT?
+    validations:
+      required: true
+
+  - type: input
+    id: stack
+    attributes:
+      label: Stack / Framework
+      placeholder: "e.g., Bun + Hono + Drizzle + PostgreSQL"
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: Where Have You Used This?
+      description: Brief, anonymized context (no client names, no specific projects)
+    validations:
+      required: true
+
+  - type: textarea
+    id: pitfalls
+    attributes:
+      label: Common Pitfalls You'd Document
+      description: What goes wrong if someone follows it naively?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: This pattern has been validated in real work (not just theory)
+          required: true
+        - label: I'm willing to open a PR if accepted
+          required: false
