@@ -1,6 +1,62 @@
 # 🤖 Claude Code Config — Multi-Role Agent System
 
-> A portable, opinionated configuration for [Claude Code](https://claude.com/claude-code) that turns it into a multi-role AI engineering partner — covering technical, product, growth, design, business, and DevOps perspectives.
+> **English** | **[العربية](README.ar.md)**
+
+A portable, opinionated configuration for [Claude Code](https://claude.com/claude-code) that turns it into a multi-role AI engineering partner — covering technical, product, growth, design, business, and DevOps perspectives.
+
+---
+
+## 🎯 Why I Published This (And What's In It For You)
+
+### My Goals
+
+1. **🌍 Share with the Arabic developer community** — Deep technical documentation in Arabic is rare. This is one attempt to close that gap.
+2. **🏗️ A portfolio of my engineering thinking** — Reflects how I reason about architecture, products, growth, and business — not just code.
+3. **🤝 A conversation starter** — For potential clients or collaborators, this repo answers half the questions before they're asked.
+4. **🔄 Collaborative improvement** — Your patterns might improve mine. Feedback is open.
+
+### Why This Matters to You
+
+#### 👨‍💻 If you're an Arabic-speaking developer
+
+- **Skip weeks of trial-and-error** — battle-tested on real projects, not a theoretical idea
+- **Native Arabic documentation** — no constant mental translation from English
+- **Ready-to-use reference** — `Patterns/` and `Anti-patterns/` save you from repeating known mistakes
+- **Easy to customize** — replace `PersonalContext.md` with your context and recommendations adapt automatically
+
+#### 🚀 If you're a solo developer or founder
+
+- **Team-level thinking without hiring** — 8 roles = 8 specialized perspectives in one assistant
+- **Breaks AI tunnel vision** — instead of a generic response, you get CTO + PM + Growth viewpoints on the same decision
+- **Prevents the Freelancer Trap** — auto-alert system when patterns drain your time (small deals, one-time work, etc.)
+- **Auto-ADR** — your architectural decisions stay documented; never forget "why I chose X" 6 months later
+
+#### 🤔 If you're considering working with me
+
+- **Review my methodology before we talk** — how I analyze, design, decide
+- **Set expectations on documentation quality** — this is the standard I produce for projects and clients
+- **Test technical/cultural fit** — before investing in a discovery call
+
+#### 🔬 If you're curious about AI workflows
+
+- **A working example of multi-agent thinking** — not a single mega-prompt
+- **Lazy-loaded architecture** — learn how to break context bloat
+- **Discovery-First protocol** — a practical fix for AI-hallucinated functions
+
+### How to Engage
+
+| You want to... | Do this... |
+|----------------|------------|
+| **Try the system** | Run the [one-liner](#-quick-start) — 30 seconds and you're set up |
+| **Build your own version** | [Fork](https://github.com/sabrydawood/claude-config/fork) and replace `PersonalContext.md` |
+| **Contribute a pattern or anti-pattern** | Open a [PR](https://github.com/sabrydawood/claude-config/pulls) — every one gets reviewed |
+| **Ask a question or discuss** | Open an [Issue](https://github.com/sabrydawood/claude-config/issues) — interaction welcome |
+| **Reach out directly** | [GitHub @sabrydawood](https://github.com/sabrydawood) |
+| **Share with others** | Send the repo to a developer trying to master Claude Code |
+
+> **Why contribute?** Every pattern you add becomes available to you and every other developer using the system. Improvements come back to you.
+
+---
 
 ## 🎯 What This Is
 
