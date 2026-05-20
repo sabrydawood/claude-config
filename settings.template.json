@@ -1,0 +1,83 @@
+{
+  "_comment": "Template for ~/.claude/settings.json. Copy to settings.json and customize. NEVER commit settings.json with secrets.",
+  "permissions": {
+    "_comment": "Add Bash/Edit/Read patterns you want to pre-approve. See https://docs.claude.com/claude-code/settings for syntax.",
+    "allow": [
+      "Bash(git status -u --short)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(npm install)",
+      "Bash(npm run:*)",
+      "Bash(bun install)",
+      "Bash(bun run:*)",
+      "Bash(bun add:*)",
+      "Bash(bun test:*)",
+      "Bash(bun run typecheck)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(bunx tsc:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(bunx eslint:*)",
+      "Bash(timeout 8 bun run dev)",
+      "WebSearch",
+      "Edit(~/.claude/CLAUDE.md)",
+      "Edit(~/.claude/Roles/*)",
+      "Edit(~/.claude/Patterns/*)",
+      "Edit(~/.claude/Anti-patterns/*)",
+      "Edit(~/.claude/Decisions/*)"
+    ]
+  },
+  "hooks": {
+    "_comment": "Configure hooks for SessionStart, PostToolUse, Stop, etc. Customize paths to your local sounds/tools.",
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "code-review-graph update",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "code-review-graph status --json",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "code-review-graph detect-changes --brief",
+            "timeout": 10000
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "_comment": "Enable plugins as needed. Example values shown — customize for your setup."
+  },
+  "effortLevel": "max",
+  "advisorModel": "opus",
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "voiceEnabled": false,
+  "_security_notes": [
+    "NEVER commit settings.json with: DB passwords, API keys, OAuth tokens, file paths revealing client work",
+    "Use ~/.claude/settings.local.json for machine-specific overrides (also gitignored)",
+    "Consider using env vars or a secrets manager for sensitive values"
+  ]
+}

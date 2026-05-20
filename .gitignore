@@ -1,0 +1,58 @@
+# ============================================================
+# Claude Code — Runtime / Cache / Session data (NEVER commit)
+# ============================================================
+cache/
+session-env/
+sessions/
+telemetry/
+statsig/
+usage-data/
+shell-snapshots/
+ide/
+file-history/
+todos/
+backups/
+debug/
+downloads/
+agent-memory/
+plugins/
+projects/
+
+# State files
+history.jsonl
+mcp-needs-auth-cache.json
+stats-cache.json
+config.json
+
+# ============================================================
+# Personal data — stays local only
+# ============================================================
+PersonalContext.md
+settings.json
+settings.local.json
+
+# Actual ADRs (templates/README OK, but content private)
+Decisions/Global/
+Decisions/Projects/
+
+# ============================================================
+# OS / Editor
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ============================================================
+# Misc
+# ============================================================
+*.log
+*.tmp
+*.bak
+node_modules/
+.env
+.env.*
+!.env.example
