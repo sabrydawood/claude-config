@@ -60,12 +60,29 @@ claude-config/
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - [Claude Code](https://claude.com/claude-code) installed
 - Git
 - PowerShell 5+ (Windows) or Bash (Mac/Linux)
 
-### Install on a new machine
+### ⚡ One-line install (recommended)
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/sabrydawood/claude-config/main/bootstrap.ps1 | iex
+```
+
+**Mac / Linux (Bash):**
+```bash
+curl -fsSL https://raw.githubusercontent.com/sabrydawood/claude-config/main/bootstrap.sh | bash
+```
+
+That's it. The bootstrap script will:
+1. Clone the repo to `~/claude-config`
+2. Back up your existing `~/.claude/` configuration (timestamped)
+3. Install all config files
+4. Create `PersonalContext.md` and `settings.json` from templates
+
+### Manual install (alternative)
 
 ```powershell
 # Windows
@@ -81,11 +98,10 @@ cd claude-config
 bash scripts/install.sh
 ```
 
-The script will:
-1. Back up any existing `~/.claude/` configuration
-2. Copy all files from this repo into `~/.claude/`
-3. Create `PersonalContext.md` from the template (if missing) — **fill it in manually**
-4. Create `settings.json` from the template — **add your secrets locally**
+### After install
+- Edit `~/.claude/PersonalContext.md` — fill in your business context
+- Edit `~/.claude/settings.json` — add your permissions/hooks/secrets
+- Restart Claude Code to load the new config
 
 ### Sync changes back to repo
 
