@@ -58,6 +58,51 @@ A portable, opinionated configuration for [Claude Code](https://claude.com/claud
 
 ---
 
+## 🎬 See It in Action
+
+<!-- GIF placeholder — replace with actual recording per docs/screenshots/RECORDING_GUIDE.md -->
+<!-- ![Auto-Detection in action](docs/screenshots/auto-detection.gif) -->
+
+```text
+                          User Question
+                                ↓
+   ┌────────────────────────────────────────────────────┐
+   │ > هل أرفع أسعاري من $5K إلى $10K للمشاريع الجديدة؟    │
+   └────────────────────────────────────────────────────┘
+
+                  Auto-Detection Triggers (no manual command)
+                                ↓
+              ┌─────────────────────────────────────┐
+              │ 🎭 Active: Senior PM + BD + Growth   │
+              │ 📌 Reason: pricing has multiple dims │
+              └─────────────────────────────────────┘
+
+                       Structured Multi-Role Response
+                                ↓
+   ┌────────────────────────────────────────────────────┐
+   │ ## 🎯 Product Take — Pricing Bump to $10K            │
+   │                                                    │
+   │ ### From PM Perspective                            │
+   │ - Current $5K/project = $X/hour effective           │
+   │ - Doubling triggers re-segmentation of clients     │
+   │                                                    │
+   │ ### From BD Perspective                            │
+   │ - At $10K, deal size justifies retainer pitch      │
+   │ - Loses bottom 30% of leads — selection effect     │
+   │                                                    │
+   │ ### From Growth Perspective                        │
+   │ - LTV/CAC math: at $10K, LTV/CAC = 4.2× (healthy)  │
+   │                                                    │
+   │ ### Recommendation ← A/B test on next 3 leads      │
+   │                                                    │
+   │ ✅ Logged decision: Decisions/Global/0003-pricing.md │
+   └────────────────────────────────────────────────────┘
+```
+
+> 📹 To create the actual GIF, see [docs/screenshots/RECORDING_GUIDE.md](docs/screenshots/RECORDING_GUIDE.md)
+
+---
+
 ## 🎯 What This Is
 
 This repository is a **personal Claude Code configuration** designed for solo developers and small teams who want their AI assistant to:
